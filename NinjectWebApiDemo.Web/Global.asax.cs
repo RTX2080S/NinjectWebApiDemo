@@ -9,7 +9,10 @@ using NinjectWebApiDemo.Repo;
 namespace AspNetWebApiDemo
 {
     public class WebApiApplication : NinjectHttpApplication
-    {    
+    {
+        /// <summary>
+        /// Move the code from Application_Start()
+        /// </summary>
         protected override void OnApplicationStarted()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);

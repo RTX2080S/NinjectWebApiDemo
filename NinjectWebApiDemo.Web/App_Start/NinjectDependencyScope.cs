@@ -1,6 +1,7 @@
 ﻿using Ninject;
 using Ninject.Syntax;
 using System;
+using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 
 namespace AspNetWebApiDemo
@@ -25,7 +26,7 @@ namespace AspNetWebApiDemo
             return resolver.TryGet(serviceType);
         }
 
-        public System.Collections.Generic.IEnumerable<object> GetServices(Type serviceType)
+        public IEnumerable<object> GetServices(Type serviceType)
         {
             if (resolver == null)
                 throw new ObjectDisposedException("this", "This scope has been disposed");
